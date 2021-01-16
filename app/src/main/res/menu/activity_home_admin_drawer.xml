@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_category" />
+
+        <item
+            android:id="@+id/nav_sub_category"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_sub_category" />
+
+
+        <item
+            android:id="@+id/nav_product"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_product" />
+
+        <item
+            android:id="@+id/nav_modify_stock"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_modify_stock" />
+
+        <item
+            android:id="@+id/nav_modify_number"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_modify_number" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

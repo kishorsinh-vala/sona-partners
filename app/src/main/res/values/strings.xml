@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SONA PARTNERS</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_text_1">Holiday</string>
+    <string name="tab_text_2">Business</string>
+    <string name="tab_text_3">Lifestyle</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">SONA PARTNERS</string>
+    <string name="nav_header_subtitle">sonapartners@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_manager">Manager Login</string>
+    <string name="menu_logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_category">Category</string>
+    <string name="menu_sub_category">Sub Category</string>
+    <string name="menu_modify_stock">Manage Stock</string>
+    <string name="menu_modify_number">Modify Number</string>
+    <string name="menu_product">Product</string>
+
+    <string-array name="array_offer">
+        <item> No</item>
+        <item> Yes</item>
+    </string-array>
+
+</resources>

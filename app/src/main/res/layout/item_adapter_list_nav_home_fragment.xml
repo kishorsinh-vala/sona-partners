@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/standard_10"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/standard_10"
+    app:cardElevation="@dimen/standard_2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/standard_10">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="9pt"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/standard_5"
+                    app:cardCornerRadius="@dimen/standard_5">
+
+                    <Button
+                        android:id="@+id/btn_design"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/login_btn_color"
+                        android:paddingLeft="@dimen/standard_25"
+                        android:paddingRight="@dimen/standard_25"
+                        android:text="View"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9pt" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_offer"
+            android:visibility="gone"
+            android:src="@drawable/ic_discount"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

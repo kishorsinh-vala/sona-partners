@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProductFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gary_bg">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            app:iconifiedByDefault="false" />
+
+        <LinearLayout
+            android:id="@+id/ll_temp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_55"
+            android:layout_below="@+id/searchView"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="@dimen/standard_5">
+
+                <Spinner
+                    android:id="@+id/spinner_cat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:typeface="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/spinner_cat"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_btn"
+                    android:padding="3.0dip"
+                    android:src="@drawable/ic_expand_more" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/standard_5">
+
+                <Spinner
+                    android:id="@+id/spinner_sub_cat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:typeface="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/spinner_sub_cat"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_btn"
+                    android:padding="3.0dip"
+                    android:src="@drawable/ic_expand_more" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_temp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:backgroundTint="@color/login_btn_color"
+            android:src="@drawable/ic_baseline_add_24" />
+
+    </RelativeLayout>
+
+</FrameLayout>

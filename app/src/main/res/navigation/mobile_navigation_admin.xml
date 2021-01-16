@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_admin"
+    app:startDestination="@+id/nav_category">
+
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="com.loginiusinfotech.sonapartner.fragment.CategoryFragment"
+        android:label="@string/menu_category"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/nav_sub_category"
+        android:name="com.loginiusinfotech.sonapartner.fragment.SubCategoryFragment"
+        android:label="@string/menu_sub_category"
+        tools:layout="@layout/fragment_sub_category" />
+
+
+    <fragment
+        android:id="@+id/nav_modify_stock"
+        android:name="com.loginiusinfotech.sonapartner.fragment.ManageStockFragment"
+        android:label="@string/menu_modify_stock"
+        tools:layout="@layout/fragment_manage_stock" />
+
+    <fragment
+        android:id="@+id/nav_product"
+        android:name="com.loginiusinfotech.sonapartner.fragment.ProductFragment"
+        android:label="@string/menu_product"
+        tools:layout="@layout/fragment_product" />
+
+
+    <fragment
+        android:id="@+id/nav_modify_number"
+        android:name="com.loginiusinfotech.sonapartner.fragment.ModifyNumberFragment"
+        android:label="@string/menu_modify_number"
+        tools:layout="@layout/fragment_modify_number" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.loginiusinfotech.sonapartner.fragment.LogoutFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_logout" />
+</navigation>
