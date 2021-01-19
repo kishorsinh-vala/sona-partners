@@ -97,6 +97,7 @@ public class HomeFragment extends Fragment {
         pd = new ProgressDialog(getActivity());
         pd.setMessage("please wait ...");
         pd.setCancelable(false);
+        categoryList();
         return root;
     }
 
@@ -116,7 +117,9 @@ public class HomeFragment extends Fragment {
                 numbersList();
             }
             pd.show();
-            categoryList();
+            spinner_cat.getItemAtPosition(0);
+            spinner_sub_cat.getItemAtPosition(0);
+//            categoryList();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -167,10 +170,10 @@ public class HomeFragment extends Fragment {
                             }
                         });
                         try {
-                            if (!Pref.getPrefDate(getActivity(), AppConstants.SAVE_CAT_POSITION, "").equals("")) {
-                                ArrayAdapter<String> array_spinner = (ArrayAdapter<String>) spinner_cat.getAdapter();
-                                spinner_cat.setSelection(array_spinner.getPosition(Pref.getPrefDate(getActivity(), AppConstants.SAVE_CAT_POSITION, "")));
-                            }
+//                            if (!Pref.getPrefDate(getActivity(), AppConstants.SAVE_CAT_POSITION, "").equals("")) {
+//                                ArrayAdapter<String> array_spinner = (ArrayAdapter<String>) spinner_cat.getAdapter();
+//                                spinner_cat.setSelection(array_spinner.getPosition(Pref.getPrefDate(getActivity(), AppConstants.SAVE_CAT_POSITION, "")));
+//                            }
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -200,7 +203,7 @@ public class HomeFragment extends Fragment {
                         cv_slider.setVisibility(View.VISIBLE);
                     } else {
                         cv_slider.setVisibility(View.GONE);
-                        Toast.makeText(getActivity(), "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getActivity(), "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
                 pd.cancel();
@@ -605,7 +608,7 @@ public class HomeFragment extends Fragment {
                             @Override
                             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                                 str_sub_cat_id_spinner = response.body().getData().get(position).getId();
-                                Pref.setPrefDate(getActivity(), AppConstants.SAVE_SUB_CAT_POSITION, "" + adapterView.getItemAtPosition(position).toString());
+                                //Pref.setPrefDate(getActivity(), AppConstants.SAVE_SUB_CAT_POSITION, "" + adapterView.getItemAtPosition(position).toString());
                                 if (!str_cat_id_spinner.equals("") && !str_sub_cat_id_spinner.equals("")){
                                     productList(cat_id,str_sub_cat_id_spinner);
                                 }
@@ -617,10 +620,10 @@ public class HomeFragment extends Fragment {
                             }
                         });
                         try {
-                            if (!Pref.getPrefDate(getActivity(), AppConstants.SAVE_SUB_CAT_POSITION, "").equals("")) {
-                                ArrayAdapter<String> array_spinner = (ArrayAdapter<String>) spinner_sub_cat.getAdapter();
-                                spinner_sub_cat.setSelection(array_spinner.getPosition(Pref.getPrefDate(getActivity(), AppConstants.SAVE_SUB_CAT_POSITION, "")));
-                            }
+//                            if (!Pref.getPrefDate(getActivity(), AppConstants.SAVE_SUB_CAT_POSITION, "").equals("")) {
+//                                ArrayAdapter<String> array_spinner = (ArrayAdapter<String>) spinner_sub_cat.getAdapter();
+//                                spinner_sub_cat.setSelection(array_spinner.getPosition(Pref.getPrefDate(getActivity(), AppConstants.SAVE_SUB_CAT_POSITION, "")));
+//                            }
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
