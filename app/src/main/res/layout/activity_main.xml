@@ -88,28 +88,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/standard_40"
+                android:layout_marginBottom="@dimen/standard_40"
                 android:background="@drawable/bg_btn"
                 android:onClick="login"
                 android:text="Log in"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="9pt" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_40"
-                android:text="Text test now working?"
-                android:textColor="@color/purple_10"
-                android:textSize="7pt" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_5"
-                android:text="Register Now!"
-                android:textColor="@color/purple_500"
-                android:textSize="8.5pt" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
