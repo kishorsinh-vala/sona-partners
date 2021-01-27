@@ -117,8 +117,7 @@ public class HomeFragment extends Fragment {
                 numbersList();
             }
             pd.show();
-            spinner_cat.getItemAtPosition(0);
-            spinner_sub_cat.getItemAtPosition(0);
+
 //            categoryList();
         } catch (Exception e) {
             e.printStackTrace();

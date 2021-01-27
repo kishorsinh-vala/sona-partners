@@ -1,6 +1,8 @@
 package com.loginiusinfotech.sonapartner.activity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -87,4 +89,20 @@ public class HomeActivity extends AppCompatActivity {
         Pref.setPrefDate(HomeActivity.this, AppConstants.SAVE_ROLE, "");
     }
 
+    public void call(View view) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "+916359906666", null));
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void webData(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("http://www.loginiusinfo.tech"));
+        startActivity(intent);
+    }
 }

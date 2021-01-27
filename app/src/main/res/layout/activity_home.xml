@@ -5,15 +5,15 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start"
     android:background="@color/gary_bg"
-    tools:context=".activity.HomeActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".activity.HomeActivity"
+    tools:openDrawer="start">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,9 +25,9 @@
                 android:layout_height="@dimen/standard_40"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/standard_5"
+                android:onClick="drawerOpen"
                 android:padding="@dimen/standard_5"
                 android:scaleType="fitXY"
-                android:onClick="drawerOpen"
                 android:src="@drawable/ic_menu" />
 
             <TextView
@@ -35,13 +35,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textStyle="bold"
                 android:gravity="center_vertical"
                 android:minHeight="?actionBarSize"
                 android:padding="@dimen/appbar_padding"
                 android:text="@string/app_name"
                 android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-                android:textColor="@color/login_text_color" />
+                android:textColor="@color/login_text_color"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <include
@@ -52,11 +52,43 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
+
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_home_drawer" />
+        app:menu="@menu/activity_home_drawer">
+        <ImageView
+            android:background="@color/white"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="18dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_call"
+            android:layout_marginLeft="45dp"/>
+        <TextView
+            android:id="@+id/txt_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:onClick="call"
+            android:textColor="@color/login_btn_color"
+            android:layout_marginBottom="20dp"
+            android:text="+91 6359906666" />
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:onClick="webData"
+            android:textColor="@color/login_btn_color"
+            android:layout_marginBottom="70dp"
+            android:text="Developed By  \n Loginius InfoTech" />
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
