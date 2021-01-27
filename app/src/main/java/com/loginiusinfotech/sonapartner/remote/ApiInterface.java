@@ -49,76 +49,76 @@ import retrofit2.http.POST;
 
 public interface ApiInterface {
 
-    @GET("banner/offerbanner.php")
+    @GET("<file>.php")
     Call<OfferBanner> bannerList();
 
-    @GET("category/list.php")
+    @GET("<file>.php")
     Call<CategoryList> categoryList();
 
-    @POST("category/add.php")
+    @POST("<file>.php")
     Call<CategoryAdd> categoryAdd(@Body CategoryAddBody body);
 
-    @POST("category/update.php")
+    @POST("<file>.php")
     Call<CategoryUpdate> categoryUpdate(@Body CategoryUpdateBody body);
 
-    @POST("category/delete.php")
+    @POST("<file>.php")
     Call<CategoryDelete> categoryDelete(@Body CategoryDeleteBody body);
 
-    @GET("role/list.php")
+    @GET("<file>.php")
     Call<RoleList> roleList();
 
-    @POST("subcategory/list.php")
+    @POST("<file>.php")
     Call<SubCategoryList> subCategoryList(@Body SubCategoryListBody body);
 
-    @POST("subcategory/add.php")
+    @POST("<file>.php")
     Call<SubCategoryAdd> subCategoryAdd(@Body SubCategoryAddBody body);
 
-    @POST("subcategory/view.php")
+    @POST("<file>.php")
     Call<SubCategoryView> subCategoryView(@Body SubCategoryViewBody body);
 
-    @POST("subcategory/edit.php")
+    @POST("<file>.php")
     Call<SubCategoryEdit> subCategoryEdit(@Body SubCategoryEditBody body);
 
-    @POST("subcategory/delete.php")
+    @POST("<file>.php")
     Call<SubCategoryDelete> subCategoryDelete(@Body SubCategoryDeleteBody body);
 
-    @GET("users/superAdminList.php")
+    @GET("<file>.php")
     Call<SuperAdminList> superAdminList();
 
-    @POST("users/add.php")
+    @POST("<file>.php")
     Call<UsersAdd> usersAdd(@Body UsersAddBody body);
 
-    @POST("users/login.php")
+    @POST("<file>.php")
     Call<Login> usersLogin(@Body LoginBody body);
 
-    @POST("users/changeStatus.php")
+    @POST("<file>.php")
     Call<ChangeStatus> changeStatus(@Body ChangeStatusBody body);
 
-    @POST("product/add.php")
+    @POST("<file>.php")
     Call<ProductAdd> productAdd(@Body ProductAddBody body);
 
-    @POST("product/list.php")
+    @POST("<file>.php")
     Call<ProductList> productList(@Body ProductListBody body);
 
-    @POST("product/edit.php")
+    @POST("<file>.php")
     Call<ProductEdit> productEdit(@Body ProductEditBody body);
 
-    @POST("product/delete.php")
+    @POST("<file>.php")
     Call<ProductDelete> productDelete(@Body ProductDeleteBody body);
 
-    @POST("product/view.php")
+    @POST("<file>.php")
     Call<ProductView> productView(@Body ProductViewBody body);
 
-    @POST("setting/maintainstock.php")
+    @POST("<file>.php")
     Call<MaintaiStock> maintainStock(@Body MaintaiStockBody body);
 
-    @POST("setting/homescrenn.php")
+    @POST("<file>.php")
     Call<ProductList> homeScreen(@Body ProductListBody body);
 
-    @POST("setting/setting.php")
+    @POST("<file>.php")
     Call<Setting> settingNumbers(@Body SettingBody body);
 
-    @GET("setting/numberlist.php")
+    @GET("<file>.php")
     Call<NumberList> numbersList();
 
 }

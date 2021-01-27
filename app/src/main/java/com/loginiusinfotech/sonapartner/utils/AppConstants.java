@@ -9,7 +9,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class AppConstants {
-    public static final String baseUrl ="http://sonamarketing.in/glossyfinish/";
+    public static final String baseUrl ="http://domain.doamin/";
 
     public static final String SAVE_USER_ID="userId";
     public static final String SAVE_EMAIL="email";
